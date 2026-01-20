@@ -2,7 +2,10 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://artifacter-official-site.pages.dev/sitemap.xml
+Sitemap: https://artifacter.syutarou.xyz/sitemap.xml
 
 # クロールレート調整
 Crawl-delay: 1
+
+# 将来のドメインへの移行時の備考
+# Sitemap: https://artifacter-official-site.pages.dev/sitemap.xml

@@ -6,34 +6,34 @@
   
   <!-- ホームページ -->
   <url>
-    <loc>https://artifacter-official-site.pages.dev/</loc>
-    <lastmod>2026-01-20</lastmod>
+    <loc>https://artifacter.syutarou.xyz/</loc>
+    <lastmod>2026-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <!-- コマンドページ -->
   <url>
-    <loc>https://artifacter-official-site.pages.dev/commands</loc>
-    <lastmod>2026-01-20</lastmod>
+    <loc>https://artifacter.syutarou.xyz/commands</loc>
+    <lastmod>2026-01-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   
   <!-- ニュースページ -->
   <url>
-    <loc>https://artifacter-official-site.pages.dev/news</loc>
-    <lastmod>2026-01-20</lastmod>
+    <loc>https://artifacter.syutarou.xyz/news</loc>
+    <lastmod>2026-01-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   
   <!-- お問い合わせページ -->
   <url>
-    <loc>https://artifacter-official-site.pages.dev/contact</loc>
-    <lastmod>2026-01-20</lastmod>
+    <loc>https://artifacter.syutarou.xyz/contact</loc>
+    <lastmod>2026-01-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
+
 </urlset>
