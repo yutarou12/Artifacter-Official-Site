@@ -6,12 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "start": "",
     "preview": "vite preview",
     "deploy": "wrangler pages deploy dist",
     "deploy:preview": "wrangler pages deploy dist --env preview", 
     "cf:login": "wrangler login",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
