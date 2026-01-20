@@ -7,9 +7,7 @@
   "pages_build_output_dir": "dist",
   
   // カスタムドメイン設定（ドメイン取得後に有効化）
-  "route": [
-    "artifacter.syutarou.xyz/*"
-  ],
+  "route": "artifacter.syutarou.xyz/*",
   
   // リダイレクト設定
   "redirects": [
