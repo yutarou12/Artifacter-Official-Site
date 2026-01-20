@@ -1,0 +1,17 @@
+{
+  "name": "ArtifacterBot 公式サイト",
+  "short_name": "ArtifacterBot",
+  "description": "原神キャラクターのビルド画像を簡単に生成できるDiscord Bot",
+  "lang": "ja",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#2563eb",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}

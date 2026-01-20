@@ -1,0 +1,18 @@
+.build-image {
+    max-width: 600px;
+    width: 100%;
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.build-example-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.build-example {
+  padding: var(--spacing-3xl) 0;
+  background: white;
+}
