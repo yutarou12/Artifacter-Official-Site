@@ -1,3 +1,5 @@
+import AdSense from '../components/AdSense'
+
 function News() {
   // 実際の運用では、これらのデータはAPIから取得されるべきです
   const newsItems = [
@@ -91,6 +93,16 @@ function News() {
           </div>
 
           <div className="news-sidebar">
+            <div className="sidebar-section">
+              <h3>スポンサーリンク</h3>
+              <div className="ad-container">
+                <AdSense 
+                    adSlot="8994340456" 
+                    adFormat="auto" 
+                    className=".card-ad"
+                />
+              </div>
+            </div>
             <div className="sidebar-section">
               <h3>最新情報を受け取る</h3>
               <p>ArtifacterBotの最新情報は以下のサーバーでお知らせしています</p>

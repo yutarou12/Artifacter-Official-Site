@@ -1,3 +1,5 @@
+import AdSense from '../components/AdSense'
+
 function Home() {
   return (
     <div className="home">
@@ -63,6 +65,16 @@ function Home() {
               <h3><a href='/commands#螺旋'>深境螺旋 編成生成</a></h3>
               <p>深境螺旋の編成をランダムで8人選出。縛りプレイをしたい時に便利？</p>
             </div>
+            <div className="feature-card">
+              <div className="ad-container">
+                <AdSense 
+                    adSlot="8994340456" 
+                    adFormat="auto" 
+                    className=".card-ad"
+                />
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

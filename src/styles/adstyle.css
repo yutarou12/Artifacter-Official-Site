@@ -11,6 +11,15 @@
   padding: 0 var(--spacing-md);
 }
 
+.card-ad {
+  max-width: 250px;
+  max-height: 220px;
+  margin: 0 auto;
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-md);
+}
+
 .header-ad {
   max-width: 728px;
   height: 90px;

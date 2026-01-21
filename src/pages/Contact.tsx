@@ -1,3 +1,5 @@
+import AdSense from '../components/AdSense'
+
 function Contact() {
   return (
     <div className="contact">
@@ -47,9 +49,33 @@ function Contact() {
                 </div>
               </div>
             </div>
+            
+            <div className="contact-footer">
+              <div className="support-note">
+                <h3>📝 お問い合わせ時のお願い</h3>
+                <p>
+                  より迅速で正確なサポートを提供するため、お問い合わせ時には以下の情報をお教えください
+                </p>
+                <ul>
+                  <li>使用したコマンド</li>
+                  <li>エラーメッセージ（該当する場合）</li>
+                  <li>UID</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           <div className="contact-sidebar">
+            <div className="info-box">
+              <h3>スポンサーリンク</h3>
+              <div className="ad-container">
+                <AdSense 
+                    adSlot="8994340456" 
+                    adFormat="auto" 
+                    className=".card-ad"
+                />
+              </div>
+            </div>
             <div className="info-box">
               <h3>サポート対応について</h3>
               <ul>
@@ -80,20 +106,6 @@ function Contact() {
                 <li><a href="https://donate.stripe.com/3cI6oG6lz19k44t2hfenS09" target="_blank" rel="noopener noreferrer">寄付</a></li>
               </ul>
             </div>
-          </div>
-        </div>
-
-        <div className="contact-footer">
-          <div className="support-note">
-            <h3>📝 お問い合わせ時のお願い</h3>
-            <p>
-              より迅速で正確なサポートを提供するため、お問い合わせ時には以下の情報をお教えください
-            </p>
-            <ul>
-              <li>使用したコマンド</li>
-              <li>エラーメッセージ（該当する場合）</li>
-              <li>UID</li>
-            </ul>
           </div>
         </div>
       </div>
