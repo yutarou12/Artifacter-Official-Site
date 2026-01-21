@@ -11,9 +11,10 @@ function Footer() {
           <div className="footer-section">
             <h4>リンク</h4>
             <ul className="footer-links">
+              <li><a href="/terms">利用規約</a></li>
+              <li><a href="/privacy">プライバシーポリシー</a></li>
               <li><a href="/commands">コマンド一覧</a></li>
               <li><a href="/news">最新ニュース</a></li>
-              <li><a href="/contact">サポート</a></li>
             </ul>
           </div>
           
