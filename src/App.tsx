@@ -5,6 +5,8 @@ import Home from './pages/Home'
 import Commands from './pages/Commands'
 import Contact from './pages/Contact'
 import News from './pages/News'
+import Privacy from './pages/Privacy'
+import Terms from './pages/Terms'
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path="/commands" element={<Commands />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/news" element={<News />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
         </Routes>
       </main>
       <Footer />
