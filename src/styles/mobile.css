@@ -1,0 +1,70 @@
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .nav {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: white;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding: var(--spacing-lg);
+    transition: left var(--transition-normal);
+    border-top: 1px solid var(--gray-200);
+  }
+  
+  .nav.nav-open {
+    left: 0;
+  }
+  
+  .nav-list {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+  
+  .nav-link {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--gray-100);
+  }
+  
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .news-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .command-header {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: flex-start;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+}

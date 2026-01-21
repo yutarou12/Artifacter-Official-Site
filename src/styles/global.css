@@ -84,140 +84,6 @@ body {
   padding-top: 80px; /* ヘッダーの高さ分 */
 }
 
-/* ヘッダー */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--gray-200);
-  padding: var(--spacing-md) 0;
-}
-
-.header-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header-logo h1 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary-color);
-}
-
-.logo-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-}
-
-.nav-list {
-  display: flex;
-  list-style: none;
-  gap: var(--spacing-xl);
-  margin: 0;
-}
-
-.nav-link {
-  text-decoration: none;
-  color: var(--gray-700);
-  font-weight: 500;
-  transition: color var(--transition-fast);
-  padding: var(--spacing-sm) var(--spacing-md);
-  border-radius: var(--border-radius-md);
-  position: relative;
-}
-
-.nav-link:hover {
-  color: var(--primary-color);
-  background-color: var(--gray-50);
-}
-
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: var(--spacing-sm);
-  gap: 3px;
-}
-
-.menu-toggle span {
-  width: 20px;
-  height: 2px;
-  background-color: var(--gray-700);
-  transition: var(--transition-fast);
-}
-
-/* フッター */
-.footer {
-  background: var(--gray-900);
-  color: var(--gray-300);
-  padding: var(--spacing-3xl) 0 var(--spacing-lg);
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-md);
-}
-
-.footer-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--spacing-xl);
-  margin-bottom: var(--spacing-2xl);
-}
-
-.footer-section h3 {
-  color: white;
-  margin-bottom: var(--spacing-md);
-  font-size: 1.125rem;
-}
-
-.footer-section h4 {
-  color: var(--gray-200);
-  margin-bottom: var(--spacing-sm);
-  font-size: 1rem;
-}
-
-.footer-links {
-  list-style: none;
-}
-
-.footer-links li {
-  margin-bottom: var(--spacing-sm);
-}
-
-.footer-links a {
-  color: var(--gray-400);
-  text-decoration: none;
-  transition: color var(--transition-fast);
-}
-
-.footer-links a:hover {
-  color: var(--primary-light);
-}
-
-.footer-bottom {
-  text-align: center;
-  padding-top: var(--spacing-lg);
-  border-top: 1px solid var(--gray-700);
-  color: var(--gray-500);
-}
-
 /* ボタン */
 .btn {
   display: inline-flex;
@@ -1017,73 +883,139 @@ body {
   margin-bottom: var(--spacing-lg);
 }
 
-/* レスポンシブデザイン */
+/* Cookie同意バナー */
+.cookie-consent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  background: rgba(0, 0, 0, 0.95);
+  color: white;
+  padding: var(--spacing-lg) var(--spacing-md);
+  backdrop-filter: blur(10px);
+  border-top: 3px solid var(--primary-color);
+}
+
+.cookie-consent-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.cookie-consent-text h3 {
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-sm);
+  color: white;
+}
+
+.cookie-consent-text p {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.cookie-link {
+  color: var(--primary-light);
+  text-decoration: underline;
+}
+
+.cookie-link:hover {
+  color: white;
+}
+
+.cookie-consent-actions {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-shrink: 0;
+}
+
+.btn-sm {
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: 0.8rem;
+}
+
+/* プライバシーページ */
+.privacy-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md) var(--spacing-3xl);
+}
+
+.privacy-content {
+  line-height: 1.8;
+}
+
+.privacy-content section {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.privacy-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+  color: var(--gray-900);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: var(--spacing-sm);
+}
+
+.privacy-content h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: var(--spacing-lg) 0 var(--spacing-sm);
+  color: var(--gray-800);
+}
+
+.privacy-content ul,ol {
+  margin: var(--spacing-md) 0;
+  padding-left: var(--spacing-lg);
+}
+
+.privacy-content li {
+  margin-bottom: var(--spacing-sm);
+  color: var(--gray-700);
+}
+
+.privacy-content a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.privacy-content a:hover {
+  color: var(--primary-dark);
+}
+
+.privacy-footer {
+  margin-top: var(--spacing-md);
+}
+
 @media (max-width: 768px) {
-  .hero-container {
-    grid-template-columns: 1fr;
+  .cookie-consent-content {
+    flex-direction: column;
     text-align: center;
   }
   
-  .hero-title {
-    font-size: 2.5rem;
-  }
-  
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .nav {
-    position: fixed;
-    top: 80px;
-    left: -100%;
-    width: 100%;
-    height: calc(100vh - 80px);
-    background: white;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    padding: var(--spacing-lg);
-    transition: left var(--transition-normal);
-    border-top: 1px solid var(--gray-200);
-  }
-  
-  .nav.nav-open {
-    left: 0;
-  }
-  
-  .nav-list {
-    flex-direction: column;
-    gap: var(--spacing-sm);
-  }
-  
-  .nav-link {
-    padding: var(--spacing-md);
-    border-bottom: 1px solid var(--gray-100);
-  }
-  
-  .menu-toggle {
-    display: flex;
-  }
-  
-  .contact-content {
-    grid-template-columns: 1fr;
-  }
-  
-  .news-content {
-    grid-template-columns: 1fr;
-  }
-  
-  .command-header {
-    flex-direction: column;
-    gap: var(--spacing-sm);
-    align-items: flex-start;
-  }
-  
-  .hero-buttons {
+  .cookie-consent-actions {
     justify-content: center;
   }
   
-  .categories-grid {
-    grid-template-columns: 1fr;
+  .ad-section {
+    padding: var(--spacing-md) 0;
+  }
+  
+  .header-ad,
+  .footer-ad {
+    max-width: 320px;
+    height: 50px;
+  }
+  
+  .sidebar-ad {
+    max-width: 320px;
+    height: 100px;
   }
 }

@@ -1,0 +1,48 @@
+/* Google AdSense関連スタイル */
+.ad-section {
+  padding: var(--spacing-lg) 0;
+  background: var(--gray-50);
+  text-align: center;
+}
+
+.ad-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.header-ad {
+  max-width: 728px;
+  height: 90px;
+  margin: 0 auto;
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-md);
+}
+
+.sidebar-ad {
+  max-width: 300px;
+  height: 250px;
+  margin: 0 auto;
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-md);
+}
+
+.footer-ad {
+  max-width: 728px;
+  height: 90px;
+  margin: 0 auto;
+  background: white;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--border-radius-md);
+}
+
+.adsense-placeholder {
+  font-family: monospace;
+  background: linear-gradient(45deg, #f9f9f9, #f1f1f1) !important;
+  border: 2px dashed #ddd !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
