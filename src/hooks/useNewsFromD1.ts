@@ -25,16 +25,6 @@ export function useNewsFromD1() {
         // 環境変数からWorkers APIのURLを取得（型安全）
         const workerApiUrl = import.meta.env.VITE_NEWS_API_URL || process.env.VITE_NEWS_API_URL
         
-        // デバッグ情報
-        console.log('🔧 Environment Debug Info:', {
-          hostname: window.location.hostname,
-          origin: window.location.origin,
-          workerApiUrl: workerApiUrl,
-          workerApiUrlType: typeof workerApiUrl,
-          workerApiUrlLength: workerApiUrl?.length || 0,
-          allEnvVars: import.meta.env
-        })
-        
         // APIエンドポイントの決定
         let apiUrl: string
         if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
