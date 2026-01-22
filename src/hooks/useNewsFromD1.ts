@@ -23,7 +23,7 @@ export function useNewsFromD1() {
     async function fetchNews() {
       try {
         // 環境変数からWorkers APIのURLを取得（型安全）
-        const workerApiUrl = import.meta.env.VITE_NEWS_API_URL
+        const workerApiUrl = import.meta.env.VITE_NEWS_API_URL || process.env.VITE_NEWS_API_URL
         
         // デバッグ情報
         console.log('🔧 Environment Debug Info:', {
@@ -40,20 +40,14 @@ export function useNewsFromD1() {
         if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
           // 開発環境：静的JSONファイル
           apiUrl = '/api/news.json'
-          console.log('🏠 Development mode: Using local JSON file')
         } else if (workerApiUrl && workerApiUrl.trim() !== '' && workerApiUrl !== 'undefined') {
           // 本番環境：環境変数で指定されたWorkers API
           apiUrl = workerApiUrl
-          console.log('☁️ Production mode: Using Workers API', workerApiUrl)
         } else {
           // フォールバック：同一ドメインのAPIルート
-          apiUrl = `${window.location.origin}/api/news`
-          console.log('⚠️ Fallback mode: Using same-domain API', apiUrl)
-          console.log('💡 Reason: workerApiUrl is', { workerApiUrl, type: typeof workerApiUrl })
+          apiUrl = 'https://artifacter-news-api.syutarou.xyz/api/news'
         }
-        
-        console.log('🔗 Final API URL:', apiUrl)
-                  
+                          
         const response = await fetch(apiUrl)
         
         if (!response.ok) {
