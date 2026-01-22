@@ -25,18 +25,34 @@ export function useNewsFromD1() {
         // 環境変数からWorkers APIのURLを取得（型安全）
         const workerApiUrl = import.meta.env.VITE_NEWS_API_URL
         
+        // デバッグ情報
+        console.log('🔧 Environment Debug Info:', {
+          hostname: window.location.hostname,
+          origin: window.location.origin,
+          workerApiUrl: workerApiUrl,
+          workerApiUrlType: typeof workerApiUrl,
+          workerApiUrlLength: workerApiUrl?.length || 0,
+          allEnvVars: import.meta.env
+        })
+        
         // APIエンドポイントの決定
         let apiUrl: string
         if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
           // 開発環境：静的JSONファイル
           apiUrl = '/api/news.json'
-        } else if (workerApiUrl) {
+          console.log('🏠 Development mode: Using local JSON file')
+        } else if (workerApiUrl && workerApiUrl.trim() !== '' && workerApiUrl !== 'undefined') {
           // 本番環境：環境変数で指定されたWorkers API
           apiUrl = workerApiUrl
+          console.log('☁️ Production mode: Using Workers API', workerApiUrl)
         } else {
           // フォールバック：同一ドメインのAPIルート
           apiUrl = `${window.location.origin}/api/news`
+          console.log('⚠️ Fallback mode: Using same-domain API', apiUrl)
+          console.log('💡 Reason: workerApiUrl is', { workerApiUrl, type: typeof workerApiUrl })
         }
+        
+        console.log('🔗 Final API URL:', apiUrl)
                   
         const response = await fetch(apiUrl)
         
