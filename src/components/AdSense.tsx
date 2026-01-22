@@ -44,22 +44,15 @@ function AdSense({ adSlot, adFormat = 'auto', className, style }: AdSenseProps) 
   }
 
   return (
-    <>
-      <ins
-          className={`adsbygoogle ${className || ''}`}
-          style={{
-            display: 'block',
-            ...style
-        }}
-        data-ad-client="ca-pub-5434654641564206"  // 実際のクライアントIDに更新が必要
-        data-ad-slot={adSlot}
-        data-ad-format={adFormat}
-        data-full-width-responsive="true"
-      />
-      <script>
-       (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-    </>
+    <ins
+      className={`adsbygoogle ${className || ''}`}
+      style={{
+        display: 'inline-block',
+        ...style
+      }}
+      data-ad-client="ca-pub-5434654641564206"  // 実際のクライアントIDに更新が必要
+      data-ad-slot={adSlot}
+    />
   )
 }
 
