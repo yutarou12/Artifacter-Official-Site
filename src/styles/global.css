@@ -993,29 +993,3 @@ body {
 .privacy-footer {
   margin-top: var(--spacing-md);
 }
-
-@media (max-width: 768px) {
-  .cookie-consent-content {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .cookie-consent-actions {
-    justify-content: center;
-  }
-  
-  .ad-section {
-    padding: var(--spacing-md) 0;
-  }
-  
-  .header-ad,
-  .footer-ad {
-    max-width: 320px;
-    height: 50px;
-  }
-  
-  .sidebar-ad {
-    max-width: 320px;
-    height: 100px;
-  }
-}

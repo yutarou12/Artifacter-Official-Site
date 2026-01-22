@@ -1,6 +1,30 @@
 /* レスポンシブデザイン */
 @media (max-width: 768px) {
-  .hero-container {
+  .cookie-consent-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .cookie-consent-actions {
+    justify-content: center;
+  }
+  
+  .ad-section {
+    padding: var(--spacing-md) 0;
+  }
+  
+  .header-ad,
+  .footer-ad {
+    max-width: 320px;
+    height: 50px;
+  }
+  
+  .sidebar-ad {
+    max-width: 320px;
+    height: 100px;
+  }
+
+    .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
   }
@@ -40,10 +64,6 @@
   .nav-link {
     padding: var(--spacing-md);
     border-bottom: 1px solid var(--gray-100);
-  }
-  
-  .menu-toggle {
-    display: flex;
   }
   
   .contact-content {

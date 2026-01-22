@@ -74,3 +74,9 @@
   background-color: var(--gray-700);
   transition: var(--transition-fast);
 }
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+}
