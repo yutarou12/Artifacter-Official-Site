@@ -10,22 +10,6 @@
     },
     {
       "id": 2,
-      "date": "2026-01-21", 
-      "title": "Google AdSense導入",
-      "content": "サイトの運営費支援のため、Google AdSenseを導入いたしました。",
-      "type": "サイト更新",
-      "isNew": true
-    },
-    {
-      "id": 3,
-      "date": "2026-01-10",
-      "title": "パフォーマンス改善アップデート",
-      "content": "ビルド画像の生成速度を約30%向上させました。より快適にArtifacterBotをご利用いただけます。",
-      "type": "機能改善",
-      "isNew": true
-    },
-    {
-      "id": 4,
       "date": "2025-01-16",
       "title": "サーバー導入数1000突破",
       "content": "おかげさまで1000のDiscordサーバーに導入いただいております。安定してサービスを提供中です。",
@@ -33,7 +17,7 @@
       "isNew": false
     },
     {
-      "id": 5,
+      "id": 3,
       "date": "2024-01-21",
       "title": "/partyコマンド追加",
       "content": "パーティーカード生成機能が追加されました。4人のキャラクター情報を1枚の画像で表示できます。",
@@ -41,10 +25,18 @@
       "isNew": false
     },
     {
-      "id": 6,
-      "date": "2024-01-01",
-      "title": "ArtifacterBot正式リリース",
-      "content": "GenshinArtifacter後継BotとしてArtifacterBotが正式リリースされました。",
+      "id": 4,
+      "date": "2023-04-22",
+      "title": "アイコン変更",
+      "content": "Botのアイコンを新しいデザインに変更しました。",
+      "type": "その他",
+      "isNew": false
+    },
+    {
+      "id": 5,
+      "date": "2023-03-10",
+      "title": "ArtifacterBot 認証通過",
+      "content": "GenshinArtifacter後継BotとしてリリースしたArtifacterBotがDiscordの認証を無事通過しました。",
       "type": "リリース",
       "isNew": false
     }
