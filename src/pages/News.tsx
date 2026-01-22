@@ -1,49 +1,37 @@
 import AdSense from '../components/AdSense'
+import { useNewsFromD1 } from '../hooks/useNewsFromD1'         // Cloudflare D1版（推奨）
 
 function News() {
-  // 実際の運用では、これらのデータはAPIから取得されるべきです
-  const newsItems = [
-    {
-      id: 1,
-      date: '2026-01-15',
-      title: 'ArtifacterBot 公式サイト開設',
-      content: 'ArtifacterBotの公式サイトが開設されました。コマンド一覧や最新情報をこちらでご確認いただけます。',
-      type: 'サイト更新',
-      isNew: true
-    },
-    {
-      id: 2,
-      date: '2026-01-10',
-      title: 'パフォーマンス改善アップデート',
-      content: 'ビルド画像の生成速度を約30%向上させました。より快適にArtifacterBotをご利用いただけます。',
-      type: '機能改善',
-      isNew: true
-    },
-    {
-      id: 4 ,
-      date: '2024-01-21',
-      title: '/partyコマンド追加',
-      content: 'パーティーカード生成機能が追加されました。4人のキャラクター情報を1枚の画像で表示できます。',
-      type: '新機能',
-      isNew: false
-    },
-    {
-      id: 3,
-      date: '2025-01-16',
-      title: 'サーバー導入数590突破',
-      content: 'おかげさまで約590のDiscordサーバーに導入いただいております。安定してサービスを提供中です。',
-      type: 'マイルストーン',
-      isNew: false
-    },
-    {
-      id: 5,
-      date: '2024-01-01',
-      title: 'ArtifacterBot正式リリース',
-      content: 'GenshinArtifacter後継BotとしてArtifacterBotが正式リリースされました。',
-      type: 'リリース',
-      isNew: false
-    }
-  ]
+  // Cloudflare D1 API経由でニュースデータを取得（フォールバック付き）
+  const { news: newsItems, loading, error } = useNewsFromD1()
+  
+  // ローディング表示
+  if (loading) {
+    return (
+      <div className="news">
+        <div className="news-container">
+          <div className="page-header">
+            <h1>ニュース・更新情報</h1>
+            <p>読み込み中...</p>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // エラー表示
+  if (error) {
+    return (
+      <div className="news">
+        <div className="news-container">
+          <div className="page-header">
+            <h1>ニュース・更新情報</h1>
+            <p style={{color: 'red'}}>データの取得に失敗しました: {error}</p>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)
