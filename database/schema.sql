@@ -1,0 +1,11 @@
+-- Cloudflare D1用のニューステーブル作成SQL
+CREATE TABLE news (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  title TEXT NOT NULL,
+  content TEXT NOT NULL,
+  type TEXT NOT NULL DEFAULT 'お知らせ',
+  created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+  is_published BOOLEAN DEFAULT true,
+  is_new BOOLEAN DEFAULT true
+);
