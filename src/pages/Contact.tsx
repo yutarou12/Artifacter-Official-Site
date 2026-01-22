@@ -71,8 +71,9 @@ function Contact() {
               <div className="ad-container">
                 <AdSense 
                     adSlot="8994340456" 
-                    adFormat="auto" 
+                    adFormat={undefined}
                     className=".card-ad"
+                    style={{width: '220px', height: '250px'}}
                 />
               </div>
             </div>
