@@ -69,7 +69,7 @@ function News() {
                   <div className="news-meta">
                     <time className="news-date">{formatDate(item.date)}</time>
                     <span className={`news-type ${getTypeClass(item.type)}`}>{item.type}</span>
-                    {item.isNew && <span className="news-badge">NEW</span>}
+                    {item.isNew ? <span className="news-badge">NEW</span> : null}
                   </div>
                   <h2 className="news-title">{item.title}</h2>
                 </div>
